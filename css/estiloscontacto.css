@@ -1,0 +1,129 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    min-height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; 
+    color: #fff;
+    padding: 20px;
+    overflow-y: auto; 
+}
+
+.container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+    padding: 40px;
+    max-width: 500px;
+    width: 100%;
+    color: #333;
+    margin-bottom: 40px; 
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #666;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+    transition: border 0.3s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+    border: 1px solid #667eea;
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    padding: 12px;
+    background-color: #667eea;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #564fb1;
+}
+
+.confidencialidad {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.confidencialidad a {
+    color: #667eea;
+    text-decoration: none;
+}
+
+.confidencialidad a:hover {
+    text-decoration: underline;
+}
+
+.regresar {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.regresar a {
+    color: #667eea;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: 2px solid #667eea;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.regresar a:hover {
+    background-color: #667eea;
+    color: white;
+}
+
+input, select, textarea, button {
+    transition: all 0.3s ease;
+}
+
+input:hover, select:hover, textarea:hover {
+    background-color: #f1f1f1;
+}
+
+button:hover {
+    background-color: #5a60e4;
+}

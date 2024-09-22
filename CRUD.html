@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilosCRUD.css">
+    <title>Crear un CRUD en Django</title>
+</head>
+<body>
+    <header>
+        <h1>Cómo Crear un CRUD desde Cero en Django</h1>
+    </header>
+    
+    <main>
+        <section>
+            <h2>1. Instalación de Django</h2>
+            <p>Primero, asegúrate de tener Python instalado. Luego, instala Django usando pip:</p>
+            <pre><code>pip install django</code></pre>
+            <p>imagen de ejemplo:</p>
+            <img src="multimedia/Djangopaso1.png" alt="Instalación de Django">
+        </section>
+
+        <section>
+            <h2>2. Crear un Proyecto Django</h2>
+            <p>Crea un nuevo proyecto con el siguiente comando:</p>
+            <pre><code>django-admin startproject mi_proyecto</code></pre>
+            <p>Imagen de ejemplo:</p>
+            <img src="multimedia/djangopaso2.png" alt="Crear un Proyecto Django">
+        </section>
+
+        <section>
+            <h2>3. Crear una Aplicación</h2>
+            <p>Dentro de tu proyecto, crea una aplicación usando:</p>
+            <pre><code>python manage.py startapp mi_app</code></pre>
+            <p>imagen de ejemplo:</p>
+            <img src="multimedia/djangopaso3.png" alt="Crear una Aplicación">
+        </section>
+
+        <section>
+            <h2>4. Configurar el Modelo</h2>
+            <p>Define tus modelos en <code>models.py</code>. Por ejemplo:</p>
+            <pre><code>class Producto(models.Model):
+    nombre = models.CharField(max_length=100)
+    precio = models.DecimalField(max_digits=10, decimal_places=2)</code></pre>
+            <p>Imagen de ejemplo:</p>
+            <img src="multimedia/djangopaso4.png" alt="Configurar el Modelo">
+        </section>
+
+        <section>
+            <h2>5. Crear Vistas y URLs</h2>
+            <p>Define tus vistas en <code>views.py</code> y mapea las URLs en <code>urls.py</code>.</p>
+            <pre><code>from django.shortcuts import render
+from .models import Producto
+
+def lista_productos(request):
+    productos = Producto.objects.all()
+    return render(request, 'lista_productos.html', {'productos': productos})</code></pre>
+            <p>imagen de ejemplo:</p>
+            <img src="multimedia/djangopaso5.png" alt="Crear Vistas y URLs">
+        </section>
+
+        <section>
+            <h2>6. Crear Plantillas</h2>
+            <p>Crea plantillas HTML para renderizar tus datos. Por ejemplo, en <code>lista_productos.html</code>:</p>
+            <pre><code>&lt;h1&gt;Lista de Productos&lt;/h1&gt;
+&lt;ul&gt;
+    {% for producto in productos %}
+        &lt;li&gt;{{ producto.nombre }} - ${{ producto.precio }}&lt;/li&gt;
+    {% endfor %}
+&lt;/ul&gt;</code></pre>
+            <p>Imagen de ejemplo:</p>
+            <img src="multimedia/djangopaso6.png" alt="Crear Plantillas">
+        </section>
+
+        <section>
+            <h2>7. Ejecutar el Servidor</h2>
+            <p>Finalmente, ejecuta el servidor de desarrollo:</p>
+            <pre><code>python manage.py runserver</code></pre>
+            <p>imagen de ejemplo:</p>
+            <img src="multimedia/djangopaso7.png" alt="Ejecutar el Servidor">
+        </section>
+    </main>
+
+</body>
+</html>

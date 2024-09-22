@@ -1,0 +1,113 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+nav {
+    background-color: #7ea59d4d;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0;
+}
+
+nav ul li a {
+    display: inline-block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: #575757;
+}
+
+header {
+    background-color: #4c77af;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    margin-bottom: 20px;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px;
+    background-color: white;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+.content-section {
+    margin-bottom: 20px;
+}
+
+.video-container {
+    margin: 20px 0;
+}
+
+.external-links {
+    list-style-type: none;
+    padding: 0;
+}
+
+.external-links li {
+    margin: 5px 0;
+}
+
+.advantages-disadvantages {
+    display: flex; 
+    justify-content: space-between; 
+    gap: 20px; 
+}
+
+.advantages, .disadvantages {
+    flex: 1; 
+    padding: 10px;
+    background-color: #f0f0f0; 
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: #4c77af;
+    padding: 20px 0;
+}
+
+footer nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    text-align: center;
+}
+
+footer nav ul li {
+    display: inline;
+    margin: 0;
+}
+
+footer nav ul li a {
+    display: inline-block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+}
+
+footer nav ul li a:hover {
+    background-color: #333;
+}
