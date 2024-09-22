@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Contacto</title>
+    <link rel="stylesheet" href="css/estiloscontacto.css">
+    <script src="js/validaciones.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Formulario de Contacto</h2>
+        <form id="formularioContacto" action="#" method="post">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" id="apellidos" name="apellidos" required>
+
+            <label for="tipo-mensaje">Tipo de mensaje:</label>
+            <select id="tipo-mensaje" name="tipo-mensaje" required>
+                <option value="queja">Queja</option>
+                <option value="sugerencia">Sugerencia</option>
+                <option value="felicitacion">Felicitación</option>
+                <option value="otro">Otro</option>
+            </select>
+
+            <label for="correo">Correo electrónico:</label>
+            <input type="email" id="correo" name="correo" required>
+
+            <label for="telefono">Teléfono móvil:</label>
+            <input type="tel" id="telefono" name="telefono" pattern="[0-9]{10}" required>
+
+            <label for="genero">Género:</label>
+            <select id="genero" name="genero" required>
+                <option value="masculino">Masculino</option>
+                <option value="femenino">Femenino</option>
+                <option value="otro">Otro</option>
+                <option value="prefiero-no-decirlo">Prefiero no decirlo</option>
+            </select>
+
+            <label for="mensaje">Cuerpo del mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+            <div class="confidencialidad">
+                <p>
+                    Aviso de Confidencialidad: La información proporcionada en este formulario será tratada de manera confidencial y no se compartirá con terceros sin su consentimiento. Para más información, revise nuestra política de privacidad.
+                </p>
+            </div>
+
+            <label>
+                <input type="checkbox" name="politica-privacidad" required> Acepto la política de privacidad
+            </label>
+
+            <button type="submit">Enviar</button>
+        </form>
+
+        <div class="regresar">
+            <a href="index.html">Regresar al Inicio</a>
+        </div>
+    </div>
+</body>
+</html>
